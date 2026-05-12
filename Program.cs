@@ -7,23 +7,54 @@ public class Program
 {
     public static void Main()
     {
-        string myName = "Victor"; // Variáveis são esseciais para reutilização do código; armazena um valor numa palavra.
-        int number = 90;            
-        double numberdouble = 7.5;
-        float numberfloat = 8.5f;
-        decimal numberdecimal = 5.5m;
-        bool boolean = true;
 
-        char caractere = 'V'; // Armazena apenas um caracter, apenas 1 item;
+        string nomeUsuario = "Victor";
+        string senhaUsuario = "victor@123";
 
-        const double pi = 3.14; // O valor é constante, não pode ser alterado
+        Console.WriteLine("---------LOGIN---------");
 
-        dynamic variable = 40; // A variável dinâmica pode ter o valor trocado para outro tipo, uma variavel int pode ser alterada pra string
-        variable = "Vito";
+        Console.Write("Digite seu nome:");
+        string nome = Console.ReadLine();
 
-        var variavel = "variavel"; // var pode ter um valor de qualquer tipo
+        Console.Write("Digite sua senha:");
+        string senha = Console.ReadLine();
 
-        Console.WriteLine($"Está Funcionando {number}");
+        Console.WriteLine("-----------------------");
+
+        if (nome == nomeUsuario && senha == senhaUsuario)
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Login bem-sucedido!");
+            Console.WriteLine("Bem vindo Victor Mori Santos");
+            Console.WriteLine("-----------------------");
+        }
+        else if (nome != nomeUsuario && senha == senhaUsuario)
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Nome do usuário incorreto!");
+            Console.WriteLine("-----------------------");
+        }
+        else if (nome == nomeUsuario && senha != senhaUsuario)
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Senha do usuário incorreta!");
+            Console.WriteLine("-----------------------");
+        }
+        else
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Nome e Senha do usuário incorreta!");
+            Console.WriteLine("-----------------------");
+        }
+
+        Console.WriteLine("Digite sua idade: ");
+        int idade = Convert.ToInt32(Console.ReadLine()); // ou int idade = int.Parse(Console.ReadLine())
+
+
+
+
+        
+    
 
         
 
